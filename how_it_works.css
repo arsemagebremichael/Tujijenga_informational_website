@@ -1,0 +1,220 @@
+body{
+    background-image:url(how_tujijenge_works_images/how_it_works.png) ;
+    overflow-x: hidden;
+    h1{
+        margin: 10vh;
+        font-size: 3vw;
+        color:#C2CA83;
+    }
+    h2{
+        text-align: center;
+        color: #084236;
+    }
+}
+
+.logo{
+    padding: 1vh;
+    height: 4rem;
+    width: auto;
+}
+.nav-center{
+    margin:-1vh;
+    display: flex;
+    background-color: white;
+    height: auto;
+}
+.links{
+    display: flex;
+    gap: 6em;
+    list-style-type:none ;
+}
+.links li{
+    margin: auto;
+    
+}
+#how_tujijenge_works a {
+    color: #C2CA83;
+}
+.links li a{
+    text-decoration: none;
+    color: #084236;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0.5em 1em; */
+    font-size: 24px;
+    /* font-family: ; */
+}
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+}
+.links :hover{
+    /* transform: scale(1.1); */
+    color: #C2CA83;
+}
+a{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: 1; */
+    font-style: normal;
+  }
+.how_tujijenge_works{
+    margin-top: 16vh;
+    margin-right: none;
+    margin-left: -5vh;
+    width: 100vw;
+    padding: 1vw 5vw;
+    background-color: white;
+    img{
+        width: 412px;
+        height: 917px;
+        border: 0px solid black;
+        border-radius: 20px;
+        box-shadow: 1px 0 4px 4px rgb(184, 184, 184);
+    }
+}
+.underline{
+    width: 0px;
+    height: 4px;
+    background: #084236;
+    margin: 0 auto 2rem auto;
+    border-radius: 2px;
+    animation: growUnderline 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+}
+@keyframes growUnderline {
+    from{
+        width: 0;
+        opacity: 0;
+    }
+    to{
+        width: 15vh;
+        opacity: 1;
+    }
+}
+.community_pictures{
+    display: flex;
+    gap: 20vh;
+    /* justify-content: center; */
+}
+.order-screenshots{
+    display: flex;
+    gap: 20vh;
+    /* justify-content: center; */
+}
+.trainings-screenshots{
+    display: flex;
+    justify-content: center;
+    gap: 20vh;
+}
+.inventory-screenshots{
+    display: flex;
+    gap: 20vh;
+    /* justify-content: center; */
+}
+.register{
+display: flex;
+gap: 2vh;
+}
+.vl {
+    border-left: 3px solid #C2CA83;
+    height: 70px;
+    animation: verticalline 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+  @keyframes verticalline {
+    from{
+        width: 0;
+        opacity: 0;
+    }
+    to{
+        width: 2vh;
+        opacity: 1;
+    }
+}
+footer {
+    padding-top: 3vh;
+    height: auto;
+    width: auto;
+    margin: 0 -1vh -1vh -1vh;
+    background-color: #084236;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    align-items: center;
+    p {
+        font-size: small;
+    }
+}
+.footer {
+    /* justify-content: flex-end; */
+    display: flex;
+    gap: 130vh;
+    /* justify-content: space-around; */
+    width: 100vw;
+    padding: 0 1em;
+    margin: 0;
+    padding-bottom: -3em;
+    /* background-color: #084236; */
+    color: white;
+    font-family: nunito;
+    align-items: center;
+}
+.contacts {
+    /* margin-top: 2; */
+    /* text-align: right; */
+    margin-right: 10rem;
+    i {
+        color: white;
+    }
+}
+.contacts h6{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-family: nunito;
+    color: #C2CA83;
+}
+.contacts p {
+    color: white;
+    margin: 0.5rem 0;
+    width: 15em;
+    color: #C2CA83;
+}
+#socials {
+    /* text-align: center; */
+    color: white;
+    display: block;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 1.5rem;
+    line-height: 1.5em;
+    color: #C2CA83;
+    /* right: 0; */
+    /* margin-right: 0; */
+    a {
+        color: white;
+    }
+    p {
+        font-size: medium;
+    }
+    h6{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+}
+.icons{
+    display: flex;
+    gap: 20px;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 0 auto;
+    /* margin-right: 0; */
+    i{
+        font-size: 0.8rem;
+    }
+}
