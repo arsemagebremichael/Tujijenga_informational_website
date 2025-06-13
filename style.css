@@ -60,7 +60,7 @@ a{
 /*  */
 .hero_page{
     background-image: linear-gradient(rgba(52, 116, 46, 0.5), rgba(40, 56, 20, 0.5)), url('images/cabbage.png');
-    height: 70vh;
+    height: 100vh;
     width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
