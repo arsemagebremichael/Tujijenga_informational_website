@@ -124,70 +124,135 @@ a {
     justify-content: center;
 }
 
-/* Make Us Different Section */
+/* Main Section */
 .make_us_different {
-    padding-bottom: 15vh;
+    padding-bottom: 6em; /* Added space before footer */
+    padding-top: 2vh;
 }
 .make_us_different h2 {
-    padding-top: 10vh;
-    font-size: xxx-large;
+    font-size: 2.3rem;
     color: #084236;
-    font-family: plus;
-    display: flex;
-    justify-content: center;
+    font-family: plus, sans-serif;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 0.7em;
+    font-weight: 700;
 }
 .make_us_different p {
-    margin: auto;
-    width: 50vw;
-    font-size: x-large;
+    margin: 0 auto 2.5em auto;
+    width: 54vw;
+    font-size: 1.15rem;
     text-align: center;
-    font-family: nunito;
+    font-family: nunito, sans-serif;
     color: #084236;
-    padding-bottom: 10vh;
+    font-weight: 500;
 }
 .make_us_different hr {
-    margin-left: 10vw;
-    justify-content: flex-start;
-    height: 5px;
+    margin-left: 11vw;
+    width: 75vw;
+    height: 2px;
     background-color: #084236;
+    border: none;
+    margin-bottom: 2em;
 }
 .make_us_different h3 {
     margin-left: 10vw;
-    align-items: center;
-    font-size: xx-large;
+    font-size: 1.5rem;
     color: #084236;
-    font-family: plus;
-    gap: 5vw;
+    font-family: plus, sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.3em;
 }
 .make_us_different button {
-    text-align: center;
     background-color: #C2CA83;
     color: #084236;
-    margin: 5vh 15vw;
-    border-color: transparent;
-    padding: 2vh 1vw;
-    font-size: large;
+    margin: 2.5vh 0 0 10vw;
+    border: none;
+    padding: 0.7em 2.1em;
+    font-size: 1rem;
     display: flex;
-    font-family: nunito;
-    border-radius: 0.5vw;
     align-items: center;
-    gap: 1vw;
+    gap: 0.7em;
+    font-family: nunito;
+    border-radius: 0.4em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-bottom: 4em;
+}
+.make_us_different button:hover {
+    background: #084236;
+    color: #fff;
 }
 
-/* Services */
+.underline {
+    width: 25vw;
+    height: 4px;
+    background: #084236;
+    margin: 0 auto 2rem auto;
+    border-radius: 2px;
+}
+
+/* Services section */
 .services {
-    padding-top: 5vw;
-    width: 70vw;
+    padding-top: 1vw;
+    width: 76vw;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-left: 10vw;
+    align-items: flex-start;
+    margin: 0 auto 2.5em auto;
 }
-.services img {
-    right: 0;
+.services > img {
     width: 10vw;
-    border: #084236 1px solid;
     border-radius: 1vw;
+    margin: 0 2vw;
+}
+.sevice {
+    width: 16vw;
+    min-width: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.3em;
+    align-items: flex-start;
+}
+.sevice > div {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.sevice img {
+    width: 2.7vw;
+    min-width: 35px;
+    border: none;
+    border-radius: 0.4vw;
+    background: #f6f9f3;
+    box-shadow: 0 1px 5px 0 #0001;
+}
+.sevice p {
+    margin: 0;
+    font-size: 1.02rem;
+    color: #084236;
+    font-family: nunito, sans-serif;
+    font-weight: 600;
+    text-align: left;
+}
+.specific_service {
+    align-items: center;
+    width: 20vw;
+    vertical-align: middle;
+}
+.foot{
+    gap: 2vw;
+    display: flex;
+    align-items: center;
+    h3{
+        padding-top: 3vh;
+    }
+    img{
+        width: 30vw;
+    }
+
+}
 }
 #mockup {
     position: absolute;
