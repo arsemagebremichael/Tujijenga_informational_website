@@ -194,7 +194,6 @@ a {
     border-radius: 2px;
 }
 
-/* Services section */
 .services {
     padding-top: 1vw;
     width: 76vw;
@@ -253,7 +252,7 @@ a {
         width: 30vw;
     }
 
-}
+
 }
 #mockup {
     position: absolute;
