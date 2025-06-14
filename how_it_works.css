@@ -8,6 +8,7 @@ body{
         color:#C2CA83;
     }
     h2{
+        font-size: 5vh;
         text-align: center;
         color: #084236;
     }
@@ -75,6 +76,14 @@ a{
         border-radius: 20px;
         box-shadow: 1px 0 4px 4px rgb(184, 184, 184);
     }
+    #list-number{
+font-size: 4em;
+color: #C2CA83;
+    }
+    p{
+        color: #084236;
+        font-size: larger;
+    }
 }
 .underline{
     width: 0px;
@@ -91,33 +100,103 @@ a{
         opacity: 0;
     }
     to{
-        width: 15vh;
+        width: 40vh;
         opacity: 1;
     }
 }
 .community_pictures{
     display: flex;
+    justify-content: center;
     gap: 20vh;
+    margin-bottom: 10vh;
     /* justify-content: center; */
 }
+.create-community{
+    /* align-items: center; */
+    margin: 8vh 70vh;
+}
+.using_services{
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    margin-bottom: 10vh;
+    h2{
+        font-size: 5vh;
+    }
+}
+/* .using-services-pic{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    margin
+} */
 .order-screenshots{
     display: flex;
     gap: 20vh;
+    margin-bottom: 10vh;
     /* justify-content: center; */
 }
 .trainings-screenshots{
     display: flex;
     justify-content: center;
     gap: 20vh;
+    margin-bottom: 10vh;
 }
+
 .inventory-screenshots{
     display: flex;
     gap: 20vh;
+    margin-bottom: 5vh;
     /* justify-content: center; */
 }
 .register{
 display: flex;
-gap: 2vh;
+gap: 1vh;
+p{
+    color: #084236;
+    font-size: larger;
+}
+
+}
+.signin{
+    display: flex;
+    padding-left: 60vw;
+    gap: 1vh; 
+    p{
+        text-align: right;
+        color: #084236;
+        font-size: larger;
+    }
+}
+.signin-pic{
+    
+    padding-left: 65vw;
+    margin-bottom: 10vh;
+}
+.join_a_community{
+    display: flex;
+    gap: 1vh;
+    margin-bottom: 5vh;  
+}
+/* . */
+.ordering{
+    display: flex;
+    gap: 1vh; 
+    margin-bottom: 5vh; 
+}
+.gain{
+    display: flex;
+    justify-content: right;
+    margin-right: 15vh;
+    p{
+        text-align: right;
+    }
+    gap: 1vh;  
+    margin-bottom: 5vh;
+}
+.inventory_management{
+    display: flex;
+    margin-bottom: 5vh;
+    gap: 1vh;  
 }
 .vl {
     border-left: 3px solid #C2CA83;
