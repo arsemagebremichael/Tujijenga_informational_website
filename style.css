@@ -126,6 +126,7 @@ a {
 
 /* Main Section */
 .make_us_different {
+    align-items: center;
     padding-bottom: 6em; /* Added space before footer */
     padding-top: 2vh;
 }
