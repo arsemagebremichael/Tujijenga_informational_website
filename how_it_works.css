@@ -1,6 +1,7 @@
 body{
     background-image:url(how_tujijenge_works_images/how_it_works.png) ;
     overflow-x: hidden;
+     font-family: 'Plus Jakarta Sans';
     h1{
         margin: 10vh;
         font-size: 3vw;
@@ -13,7 +14,6 @@ body{
 }
 
 .logo{
-    padding: 1vh;
     height: 4rem;
     width: auto;
 }
@@ -49,8 +49,7 @@ body{
 .nav-header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 5em;
+    gap: 50rem;
 }
 .links :hover{
     /* transform: scale(1.1); */

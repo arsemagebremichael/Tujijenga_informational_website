@@ -58,6 +58,7 @@ a {
     /* font-weight: 1; */
     font-style: normal;
 }
+
 footer {
     padding-top: 4vh;
     width: 100vw;
@@ -65,7 +66,9 @@ footer {
     font-family: 'Poppins', sans-serif;
     align-items: center;
     p {
-        font-size: small;
+      
+    font-size: 100%;
+
     }
 }
 .footer {
@@ -148,7 +151,7 @@ footer {
 }
 
 h1 {
-    font-size: 500%;
+    font-size: 400%;
 }
 
 h1,
@@ -160,12 +163,12 @@ h3 {
 h2 {
     color: #074135;
     text-align: center;
-    font-size: 300%;
+    font-size: xxx-large;
 
 }
 
 h3 {
-    font-size: 200%;
+    font-size: xx-large;
 }
 
 .services {
@@ -175,7 +178,7 @@ h3 {
 }
 
 .serv {
-    width: 20vw;
+    width: 25vw;
     background: #fff;
     padding: 3rem;
     border-radius: 18px;
@@ -194,6 +197,7 @@ h3 {
 }
 .service p{
     color: #074135;
+    font-size: x-large;
 }
 .underline_service {
     width: 15vw;
