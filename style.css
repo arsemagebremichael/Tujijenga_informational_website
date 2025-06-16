@@ -3,24 +3,29 @@ body {
     width: 100vw;
     overflow-x: hidden;
 }
+
 @keyframes growUnderline {
     from {
         width: 0;
         opacity: 0;
     }
+
     to {
         width: 25vw;
         opacity: 1;
     }
 }
+
 @font-face {
     font-family: nunito;
     src: url(fonts/Nunito/Nunito-VariableFont_wght.ttf);
 }
+
 @font-face {
     font-family: plus;
     src: url(fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf);
 }
+
 .navbar {
     position: fixed;
     top: 0;
@@ -28,40 +33,40 @@ body {
     width: 100%;
     background: #fff;
     z-index: 10;
+}
 
-  }
-  
-  .logo {
+.logo {
     height: 5vh;
     width: auto;
     display: block;
-  }
-  
-  .nav-center {
+}
+
+.nav-center {
     margin: 0 auto;
     padding: 0.5rem 2rem;
-  }
-  
-  .nav-header {
+}
+
+.nav-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .links {
+}
+
+.links {
     display: flex;
     gap: 2.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .links li {
+    transition: max-height 0.3s ease;
+}
+
+.links li {
     display: flex;
     align-items: center;
-  }
-  
-  .links li a {
+}
+
+.links li a {
     text-decoration: none;
     color: #084236;
     font-family: "Nunito", sans-serif;
@@ -70,14 +75,31 @@ body {
     transition: color 0.2s;
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
-  }
-  
-  .links li a:hover {
+}
+
+.links li a:hover {
     color: #C2CA83;
     background: rgba(194, 202, 131, 0.08);
-  }
-  
- 
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 20;
+}
+
+.hamburger span {
+    height: 1px;
+    width: 20px;
+    background: #084236;
+    margin: 3px 0;
+    border-radius: 2px;
+    display: block;
+    transition: 0.3s;
+}
 
 .hero_page {
     background-image: linear-gradient(rgba(20, 37, 18, 0.5), rgba(24, 29, 19, 0.5)), url('images/editted.png');
@@ -97,6 +119,7 @@ body {
     font-family: plus;
     font-weight: normal;
 }
+
 .hero_page button {
     text-align: center;
     background-color: #C2CA83;
@@ -113,6 +136,7 @@ body {
     gap: 1vw;
     cursor: pointer;
 }
+
 .hero_page button:hover {
     background-color: #084236;
     color: white;
@@ -130,7 +154,8 @@ body {
     background-color: #051814;
 
     z-index: 10;
-    img{
+
+    img {
         width: 10vh;
         position: absolute;
         top: 12vh;
@@ -139,6 +164,7 @@ body {
         border: 1px solid white;
     }
 }
+
 .popuptext {
     display: flex;
     padding: 20px;
@@ -151,15 +177,16 @@ body {
     left: 40%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    img{
+
+    img {
         top: 50%;
-    left: 130%;
-    transform: translate(-50%, -50%);
+        left: 130%;
+        transform: translate(-50%, -50%);
     }
-    
+
 }
 
-.close{
+.close {
     position: absolute;
     top: 5vh;
     right: 5vh;
@@ -168,17 +195,18 @@ body {
     color: white;
 
 }
+
 .tujijenge {
-    display: flex;
     justify-content: center;
 }
 
 .make_us_different {
 
     align-items: center;
-    padding-bottom: 6em; /* Added space before footer */
+    padding-bottom: 6em;
     padding-top: 5vh;
 }
+
 .make_us_different h2 {
     font-size: 2.3rem;
     color: #084236;
@@ -188,6 +216,7 @@ body {
     margin-bottom: 0.7em;
     font-weight: 700;
 }
+
 .make_us_different p {
     margin: 0 auto 2.5em auto;
     width: 54vw;
@@ -197,6 +226,7 @@ body {
     color: #084236;
     font-weight: 500;
 }
+
 .make_us_different hr {
     margin-left: 11vw;
     width: 75vw;
@@ -205,6 +235,7 @@ body {
     border: none;
     margin-bottom: 2em;
 }
+
 .make_us_different h3 {
     margin-left: 10vw;
     font-size: 1.5rem;
@@ -231,6 +262,7 @@ body {
     transition: background 0.2s, color 0.2s;
     margin-bottom: 4em;
 }
+
 .make_us_different button:hover {
     background: #084236;
     color: #fff;
@@ -256,11 +288,13 @@ body {
     display: flex;
     flex-direction: column;
 }
-.sevice > div {
+
+.sevice>div {
     display: flex;
     align-items: center;
     gap: 1em;
 }
+
 .sevice img {
     width: 2.7vw;
     border: none;
@@ -268,6 +302,7 @@ body {
     background: #f6f9f3;
     box-shadow: 0 1px 5px 0 #0001;
 }
+
 .sevice p {
     margin: 0;
     font-size: 1.02rem;
@@ -276,41 +311,50 @@ body {
     font-weight: 600;
     text-align: left;
 }
+
 .specific_service {
     align-items: center;
     width: 20vw;
     vertical-align: middle;
 }
-.work_with_us{
+
+.work_with_us {
     margin-top: 20vh;
     margin-bottom: 20vh;
 }
-.foot{
+
+.foot {
     gap: 2vw;
     display: flex;
     align-items: center;
-    h3{
+
+    h3 {
         padding-top: 3vh;
     }
-    img{
+
+    img {
         width: 30vw;
     }
 
 
 }
+
 #mockup {
     width: 15vw;
     position: absolute;
     right: 10vw;
     margin-top: -40vh;
 }
+
 .sevice {
     width: 20vw;
 }
+
 .sevice img {
     width: 5vw;
     border: transparent;
 }
+
 .specific_service {
     align-items: center;
     width: 20vw;
@@ -324,12 +368,15 @@ body {
     align-items: center;
     font-family: large;
 }
+
 .foot h3 {
     padding-top: 3vh;
 }
+
 .foot img {
     width: 30vw;
 }
+
 .underline {
     width: 0px;
     height: 4px;
@@ -348,9 +395,11 @@ footer {
     font-family: 'Poppins', sans-serif;
     align-items: center;
 }
+
 footer p {
     font-size: large;
 }
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -362,9 +411,11 @@ footer p {
     font-family: nunito;
     align-items: center;
 }
+
 .contacts {
     margin-right: 10rem;
 }
+
 .contacts h6 {
     font-size: 1.5rem;
     font-weight: 400;
@@ -372,51 +423,192 @@ footer p {
     font-family: nunito;
     color: #C2CA83;
 }
+
 .contacts p {
     margin: 0.5rem 0;
     width: 15em;
     color: #C2CA83;
 }
+
 #socials {
     display: block;
     gap: 1.5rem;
     color: #C2CA83;
 }
+
 #socials p {
     font-size: large;
 }
+
 #socials h6 {
     font-size: 1.5rem;
     margin-bottom: 1px;
 }
+
 .icons {
     display: flex;
     gap: 20px;
     align-items: center;
     margin: 0 auto;
 }
+
 .icons i {
     font-size: 0.8rem;
 }
+/* 
 
+@media (max-width: 900px) {
+    .links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        background: #fff;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        z-index: 9;
+    }
 
-  
-  @media (max-width: 480px) {
-    .container {
-      padding: 4px;
+    .links.open {
+        max-height: 350px;
+        padding: 1em 0;
+        border-bottom: 1px solid #eee;
+        transition: max-height 0.3s ease;
     }
-    
-    .header, .footer {
-      font-size: 14px;
-    }
-  }
 
-  @media (max-width: 768px) {
-    .container {
-      padding: 8px;
+    .links li {
+        width: 100%;
+        justify-content: center;
+        padding: 0.7em 0;
     }
-    
-    .sidebar {
-      display: none;
+
+    .hamburger {
+        display: flex;
     }
-  }
+} */
+
+@media (max-width: 480px) {
+    .links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        background: #fff;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        z-index: 9;
+    }
+
+    .links.open {
+        max-height: 350px;
+        padding: 1em 0;
+        border-bottom: 1px solid #eee;
+        transition: max-height 0.3s ease;
+    }
+
+    .links li {
+        width: 100%;
+        justify-content: center;
+        padding: 0.7em 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+        
+    }
+
+    .links {
+        gap: 0vw;
+        font-size: 10px;
+
+    }
+
+    .hero_page {
+        width: 100vw;
+        background-size: cover;
+
+        h1 {
+            font-size: xx-large;
+            width: 80vw;
+        }
+    }
+
+    .tujijenge {
+        width: 10vw;
+    }
+
+    .make_us_different {
+        font-size: x-large;
+        width: 80vw;
+
+        h2 {
+            width: 80vw;
+        }
+
+        p {
+            width: 80vw;
+        }
+    }
+
+    .service img {
+        width: 20vw;
+    }
+
+    .sevice {
+        flex-direction: column;
+    }
+
+.popup {
+    width: 90vw;
+}
+.tujijenge img{
+    width: 70vw;
+    justify-content: center;
+    margin-left: 15vw;
+}
+
+.make_us_different {
+ 
+    text-align: center;
+    h2{
+        font-size: x-large;
+    }
+    p{
+        font-size: 20px;
+        
+    }
+    .services{
+        flex-direction: column;
+    }
+    .specific_service img{
+        width: 10vh;
+    }
+}
+.foot img{
+    width: 30vw;
+
+}
+.footer{
+flex-direction: column;
+}
+footer p{
+
+    font-size: medium;
+}
+.contacts p{
+    font-size: medium;
+    width: 80vw;
+    padding-left: 40vw;
+
+}
+}
