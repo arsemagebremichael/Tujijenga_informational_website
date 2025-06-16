@@ -1,82 +1,104 @@
-body{
-    background-image:url(how_tujijenge_works_images/how_it_works.png) ;
+body {
+    background-image: url(how_tujijenge_works_images/how_it_works.png);
     overflow-x: hidden;
-     font-family: 'Plus Jakarta Sans';
-    h1{
+    font-family: 'Plus Jakarta Sans';
+
+    h1 {
         margin: 10vh;
         font-size: 3vw;
-        color:#C2CA83;
+        color: #C2CA83;
     }
-    h2{
+
+    h2 {
+        font-size: 5vh;
         text-align: center;
         color: #084236;
     }
 }
 
-.logo{
-    height: 4rem;
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+
+  }
+  
+  .logo {
+    height: 5vh;
     width: auto;
-}
-.nav-center{
-    margin:-1vh;
+    display: block;
+  }
+  
+  .nav-center {
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+  }
+  
+  .nav-header {
     display: flex;
-    background-color: white;
-    height: auto;
-}
-.links{
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .links {
     display: flex;
-    gap: 6em;
-    list-style-type:none ;
-}
-.links li{
-    margin: auto;
-    
-}
-#how_tujijenge_works a {
-    color: #C2CA83;
-}
-.links li a{
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .links li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .links li a {
     text-decoration: none;
     color: #084236;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: 0.5em 1em; */
-    font-size: 24px;
-    /* font-family: ; */
-}
-.nav-header{
-    display: flex;
-    justify-content: space-between;
-    gap: 50rem;
-}
-.links :hover{
-    /* transform: scale(1.1); */
-    color: #C2CA83;
-}
-a{
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    /* font-weight: 1; */
-    font-style: normal;
+    font-size: large;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
   }
-.how_tujijenge_works{
+  
+  .links li a:hover {
+    color: #C2CA83;
+    background: rgba(194, 202, 131, 0.08);
+  }
+
+.how_tujijenge_works {
     margin-top: 16vh;
     margin-right: none;
     margin-left: -5vh;
     width: 100vw;
     padding: 1vw 5vw;
     background-color: white;
-    img{
-        width: 412px;
-        height: 917px;
+
+    img {
+        width: 7vw;
         border: 0px solid black;
         border-radius: 20px;
         box-shadow: 1px 0 4px 4px rgb(184, 184, 184);
     }
+
+    #list-number {
+        font-size: 4em;
+        color: #C2CA83;
+    }
+
+    p {
+        color: #084236;
+        font-size: larger;
+    }
 }
-.underline{
+
+.underline {
     width: 0px;
     height: 4px;
     background: #084236;
@@ -85,56 +107,148 @@ a{
     animation: growUnderline 0.6s ease-out forwards;
     animation-delay: 0.3s;
 }
+
 @keyframes growUnderline {
-    from{
+    from {
         width: 0;
         opacity: 0;
     }
-    to{
-        width: 15vh;
+
+    to {
+        width: 40vh;
         opacity: 1;
     }
 }
-.community_pictures{
-    display: flex;
-    gap: 20vh;
-    /* justify-content: center; */
-}
-.order-screenshots{
-    display: flex;
-    gap: 20vh;
-    /* justify-content: center; */
-}
-.trainings-screenshots{
+
+.community_pictures {
     display: flex;
     justify-content: center;
     gap: 20vh;
-}
-.inventory-screenshots{
-    display: flex;
-    gap: 20vh;
+    margin-bottom: 10vh;
     /* justify-content: center; */
 }
-.register{
-display: flex;
-gap: 2vh;
+
+.create-community {
+    /* align-items: center; */
+    margin: 2vh;
 }
+
+.using_services {
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    margin-bottom: 10vh;
+
+    h2 {
+        font-size: 5vh;
+    }
+}
+
+/* .using-services-pic{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    margin
+} */
+.order-screenshots {
+    display: flex;
+    gap: 20vh;
+    margin-bottom: 10vh;
+    /* justify-content: center; */
+}
+
+.trainings-screenshots {
+    display: flex;
+    justify-content: center;
+    gap: 20vh;
+    margin-bottom: 10vh;
+}
+
+.inventory-screenshots {
+    display: flex;
+    gap: 20vh;
+    margin-bottom: 5vh;
+    /* justify-content: center; */
+}
+
+.register {
+    display: flex;
+    gap: 1vh;
+
+    p {
+        color: #084236;
+        font-size: larger;
+    }
+
+}
+
+.signin {
+    display: flex;
+    padding-left: 60vw;
+    gap: 1vh;
+
+    p {
+        text-align: right;
+        color: #084236;
+        font-size: larger;
+    }
+}
+
+.signin-pic {
+
+    padding-left: 65vw;
+    margin-bottom: 10vh;
+}
+
+.join_a_community {
+    display: flex;
+    gap: 1vh;
+}
+
+/* . */
+.ordering {
+    display: flex;
+    gap: 1vh;
+    margin-bottom: 5vh;
+}
+
+.gain {
+    display: flex;
+    justify-content: right;
+    margin-right: 15vh;
+
+    p {
+        text-align: right;
+    }
+
+    gap: 1vh;
+    margin-bottom: 5vh;
+}
+
+.inventory_management {
+    display: flex;
+    margin-bottom: 5vh;
+    gap: 1vh;
+}
+
 .vl {
     border-left: 3px solid #C2CA83;
     height: 70px;
     animation: verticalline 0.6s ease-out forwards;
     animation-delay: 0.3s;
-  }
-  @keyframes verticalline {
-    from{
+}
+
+@keyframes verticalline {
+    from {
         width: 0;
         opacity: 0;
     }
-    to{
+
+    to {
         width: 2vh;
         opacity: 1;
     }
 }
+
 footer {
     padding-top: 3vh;
     height: auto;
@@ -144,10 +258,12 @@ footer {
     font-family: 'Poppins', sans-serif;
     color: white;
     align-items: center;
+
     p {
         font-size: small;
     }
 }
+
 .footer {
     /* justify-content: flex-end; */
     display: flex;
@@ -162,27 +278,32 @@ footer {
     font-family: nunito;
     align-items: center;
 }
+
 .contacts {
     /* margin-top: 2; */
     /* text-align: right; */
     margin-right: 10rem;
+
     i {
         color: white;
     }
 }
-.contacts h6{
+
+.contacts h6 {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
     font-family: nunito;
     color: #C2CA83;
 }
+
 .contacts p {
     color: white;
     margin: 0.5rem 0;
     width: 15em;
     color: #C2CA83;
 }
+
 #socials {
     /* text-align: center; */
     color: white;
@@ -192,28 +313,33 @@ footer {
     gap: 1.5rem;
     line-height: 1.5em;
     color: #C2CA83;
+
     /* right: 0; */
     /* margin-right: 0; */
     a {
         color: white;
     }
+
     p {
         font-size: medium;
     }
-    h6{
+
+    h6 {
         font-size: 1.5rem;
         margin-bottom: 10px;
         font-weight: 400;
     }
 }
-.icons{
+
+.icons {
     display: flex;
     gap: 20px;
     /* justify-content: center; */
     align-items: center;
     margin: 0 auto;
+
     /* margin-right: 0; */
-    i{
+    i {
         font-size: 0.8rem;
     }
 }

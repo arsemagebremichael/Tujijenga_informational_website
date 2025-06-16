@@ -1,0 +1,414 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8faf6;
+    color: #182c20;
+    line-height: 1.6;
+
+    margin: auto;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: nunito;
+    src: url(fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: plus;
+    src: url(fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+/.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+
+  }
+  
+  .logo {
+    height: 5vh;
+    width: auto;
+    display: block;
+  }
+  
+  .nav-center {
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+  }
+  
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .links li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .links li a {
+    text-decoration: none;
+    color: #084236;
+    font-family: "Nunito", sans-serif;
+    font-size: large;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .links li a:hover {
+    color: #C2CA83;
+    background: rgba(194, 202, 131, 0.08);
+  }
+
+.faq-top {
+    display: flex;
+    justify-content: space-between;
+    background: #C2CA83;
+    border-radius: 0 0 10px 10px;
+    padding: 5vh 10vh 10vw;
+    gap: 32px;
+    width: 100vw;
+    align-items: center;
+
+}
+
+.faq-intro {
+    flex: 2;
+
+    h1 {
+        font-size: xxx-large;
+        font-weight: normal;
+        font-family: plus;
+        margin-bottom: 10px;
+        color: #22543d;
+        width: 30vw;
+    }
+}
+
+.highlight {
+    color: #22543d;
+    width: 30vw;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: large;
+    margin-top: 8px;
+}
+
+.faq-search-box {
+    flex: 1;
+    padding-left: 5vw;
+    background: none;
+    padding: 0;
+
+    h3 {
+        font-size: x-large;
+        margin-bottom: 12px;
+        color: #22543d;
+        font-family: plus;
+        font-weight: normal;
+    }
+
+    form {
+        display: flex;
+        background: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px #dde7dc;
+    }
+
+    input {
+        font-family: nunito;
+        flex: 1;
+        border: none;
+        padding: 2vh 1vw;
+        font-size: 1em;
+        outline: none;
+        background: transparent;
+    }
+}
+
+
+button {
+    background: #22543d;
+    color: #fff;
+    border: none;
+    padding: 0 16px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.faq-search-box button:hover {
+    background: #2f855a;
+}
+
+.main {
+    background: #f8faf6;
+    padding: 40px 0 0 0;
+}
+
+.faq-main {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 48px;
+}
+
+
+
+.faq-right {
+    flex: 1;
+    min-width: 280px;
+    margin-top: 0;
+}
+
+.faq-section {
+    margin-bottom: 5vh;
+    h2 {
+        margin-bottom: 12px;
+        font-size: xx-large;
+        font-family: plus;
+        font-weight: normal;
+        color: #22543d;
+    
+    }
+}
+
+
+.faq-que {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 8px #e5e5e5;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    color: #22543d;
+    padding: 18px 22px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+.faq-question::after {
+    content: "▼";
+    float: right;
+    font-size: 0.9em;
+    transition: transform 0.3s;
+}
+
+.faq-item.open .faq-question::after {
+    transform: rotate(-180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #f5f9f6;
+    color: #22543d;
+    font-size: 0.98em;
+    padding: 0 22px;
+    transition: max-height 0.4s cubic-bezier(.4, 0, .2, 1), padding 0.4s;
+}
+
+.faq-item.open .faq-answer {
+    padding: 14px 22px 20px 22px;
+    max-height: 200px;
+}
+
+.faq-contact-form {
+    background-image: linear-gradient(rgba(228, 233, 228, 0.5), rgba(187, 192, 180, 0.5)), url('images/cabbage.png');
+    border-radius: 10px;
+    padding: 4vh 2vw;
+    margin-top: 0;
+    font-family: nunito;
+    h4 {
+        font-size: 1em;
+        margin-bottom: 14px;
+        color: #22543d;
+    }
+}
+
+
+
+.faq-contact-form form {
+    font-family: nunito;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-contact-form input,
+.faq-contact-form textarea {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 0.98em;
+    background: #fff;
+    resize: none;
+    outline: none;
+    font-family: nunito;
+}
+
+.faq-contact-form button {
+    background: #22543d;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: nunito;
+}
+
+.faq-contact-form button:hover {
+    background: #2f855a;
+}
+
+
+.testimonials {
+    font-family: nunito;
+    background: #22543d;
+    text-align: center;
+    padding: 50px 30px;
+    h3 {
+        font-size: xx-large;
+        font-weight: 400;
+        color: #C2CA83;
+    }
+    h2{
+        font-weight: normal;
+        font-size: xx-large;
+        color: white;
+        padding-bottom: 5vh;
+
+    }
+}
+
+ 
+
+.testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+
+.testimonial-item {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 24px 18px 16px 18px;
+    width: 210px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-item img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 14px;
+    border: 3px solid #e5f0e6;
+}
+
+.testimonial-item p {
+    font-size: 0.97em;
+    color: #e5f0e6;
+}
+
+
+footer {
+    padding-top: 4vh;
+    width: 100vw;
+    background-color: #084236;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+}
+footer p {
+    font-size: large;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    padding: 0 1em;
+    margin: auto;
+    padding-bottom: 2em;
+    color: white;
+    font-family: nunito;
+    align-items: center;
+}
+.contacts {
+    margin-right: 10rem;
+}
+.contacts h6 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-family: nunito;
+    color: #C2CA83;
+}
+.contacts p {
+    margin: 0.5rem 0;
+    width: 15em;
+    color: #C2CA83;
+}
+#socials {
+    display: block;
+    gap: 1.5rem;
+    color: #C2CA83;
+}
+#socials p {
+    font-size: large;
+}
+#socials h6 {
+    font-size: 1.5rem;
+    margin-bottom: 1px;
+}
+.icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0 auto;
+}
+.icons i {
+    font-size: 0.8rem;
+}
+

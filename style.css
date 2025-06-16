@@ -3,7 +3,16 @@ body {
     width: 100vw;
     overflow-x: hidden;
 }
-
+@keyframes growUnderline {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 25vw;
+        opacity: 1;
+    }
+}
 @font-face {
     font-family: nunito;
     src: url(fonts/Nunito/Nunito-VariableFont_wght.ttf);
@@ -12,51 +21,66 @@ body {
     font-family: plus;
     src: url(fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf);
 }
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
 
-/* Navigation */
-.logo {
-    height: 4rem;
+  }
+  
+  .logo {
+    height: 5vh;
     width: auto;
-}
-.nav-center {
+    display: block;
+  }
+  
+  .nav-center {
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+  }
+  
+  .nav-header {
     display: flex;
-    background-color: white;
-    height: auto;
-}
-.links {
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .links {
     display: flex;
-    gap: 6em;
-    list-style-type: none;
-}
-.links li {
-    margin: auto;
-}
-.links li a {
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .links li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .links li a {
     text-decoration: none;
     color: #084236;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 24px;
-}
-.nav-header {
-    display: flex;
-    justify-content: space-between;
-    gap: 50rem;
-}
-.links :hover {
-    color: #C2CA83;
-}
-a {
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
+    font-size: large;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .links li a:hover {
+    color: #C2CA83;
+    background: rgba(194, 202, 131, 0.08);
+  }
+  
+ 
 
-/* Hero Section */
 .hero_page {
-    background-image: linear-gradient(rgba(52, 116, 46, 0.5), rgba(40, 56, 20, 0.5)), url('images/cabbage.png');
+    background-image: linear-gradient(rgba(20, 37, 18, 0.5), rgba(24, 29, 19, 0.5)), url('images/editted.png');
     height: 100vh;
     width: 100vw;
     background-repeat: no-repeat;
@@ -66,7 +90,7 @@ a {
 .hero_page h1 {
     margin: auto;
     text-align: center;
-    padding-top: 20vh;
+    padding-top: 32vh;
     font-size: 400%;
     width: 60vw;
     color: #C2CA83;
@@ -91,11 +115,11 @@ a {
 }
 .hero_page button:hover {
     background-color: #084236;
-    color: wheat;
+    color: white;
 }
 
-/* Pop up */
 .popup {
+    border-radius: 2vh;
     display: none;
     position: fixed;
     top: 50vh;
@@ -103,93 +127,179 @@ a {
     transform: translate(-50%, -50%);
     width: 30vw;
     height: 50vh;
-    background-color: #113f36;
+    background-color: #051814;
+
     z-index: 10;
+    img{
+        width: 10vh;
+        position: absolute;
+        top: 12vh;
+        left: 5vw;
+        border-radius: 1vh;
+        border: 1px solid white;
+    }
 }
 .popuptext {
-    background-color: white;
+    display: flex;
     padding: 20px;
-    border: 1px solid black;
+    color: #C2CA83;
+    font-family: nunito;
+    font-size: x-large;
     border-radius: 5px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
-    z-index: 11;
+    z-index: 10;
+    img{
+        top: 50%;
+    left: 130%;
+    transform: translate(-50%, -50%);
+    }
+    
 }
 
-/* Tujijenge Section */
+.close{
+    position: absolute;
+    top: 5vh;
+    right: 5vh;
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+
+}
 .tujijenge {
     display: flex;
     justify-content: center;
 }
 
-/* Make Us Different Section */
 .make_us_different {
-    padding-bottom: 15vh;
+
+    align-items: center;
+    padding-bottom: 6em; /* Added space before footer */
+    padding-top: 5vh;
 }
 .make_us_different h2 {
-    padding-top: 10vh;
-    font-size: xxx-large;
+    font-size: 2.3rem;
     color: #084236;
     font-family: plus;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 0.7em;
+    font-weight: 700;
 }
 .make_us_different p {
-    margin: auto;
-    width: 50vw;
+    margin: 0 auto 2.5em auto;
+    width: 54vw;
     font-size: x-large;
     text-align: center;
     font-family: nunito;
     color: #084236;
-    padding-bottom: 10vh;
+    font-weight: 500;
 }
 .make_us_different hr {
-    margin-left: 10vw;
-    justify-content: flex-start;
-    height: 5px;
+    margin-left: 11vw;
+    width: 75vw;
+    height: 2px;
     background-color: #084236;
+    border: none;
+    margin-bottom: 2em;
 }
 .make_us_different h3 {
     margin-left: 10vw;
-    align-items: center;
-    font-size: xx-large;
+    font-size: 1.5rem;
     color: #084236;
-    font-family: plus;
-    gap: 5vw;
-}
-.make_us_different button {
-    text-align: center;
-    background-color: #C2CA83;
-    color: #084236;
-    margin: 5vh 15vw;
-    border-color: transparent;
-    padding: 2vh 1vw;
-    font-size: large;
-    display: flex;
-    font-family: nunito;
-    border-radius: 0.5vw;
-    align-items: center;
-    gap: 1vw;
+    font-family: plus, sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.3em;
 }
 
-/* Services */
+.make_us_different button {
+    background-color: #C2CA83;
+    color: #084236;
+    margin: 2.5vh 0 0 10vw;
+    border: none;
+    padding: 0.7em 2.1em;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    font-family: nunito;
+    border-radius: 0.4em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-bottom: 4em;
+}
+.make_us_different button:hover {
+    background: #084236;
+    color: #fff;
+}
+
+.underline {
+    width: 25vw;
+    height: 4px;
+    background: #084236;
+    margin: 0 auto 2rem auto;
+    border-radius: 2px;
+}
+
 .services {
-    padding-top: 5vw;
-    width: 70vw;
+    width: 76vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 10vw;
+    margin: 0 auto 2.5em auto;
 }
-.services img {
-    right: 0;
-    width: 10vw;
-    border: #084236 1px solid;
-    border-radius: 1vw;
+
+.sevice {
+    display: flex;
+    flex-direction: column;
+}
+.sevice > div {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.sevice img {
+    width: 2.7vw;
+    border: none;
+    border-radius: 0.4vw;
+    background: #f6f9f3;
+    box-shadow: 0 1px 5px 0 #0001;
+}
+.sevice p {
+    margin: 0;
+    font-size: 1.02rem;
+    color: #084236;
+    font-family: nunito, sans-serif;
+    font-weight: 600;
+    text-align: left;
+}
+.specific_service {
+    align-items: center;
+    width: 20vw;
+    vertical-align: middle;
+}
+.work_with_us{
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+.foot{
+    gap: 2vw;
+    display: flex;
+    align-items: center;
+    h3{
+        padding-top: 3vh;
+    }
+    img{
+        width: 30vw;
+    }
+
+
 }
 #mockup {
+    width: 15vw;
     position: absolute;
     right: 10vw;
     margin-top: -40vh;
@@ -205,13 +315,14 @@ a {
     align-items: center;
     width: 20vw;
     vertical-align: middle;
+    margin-bottom: 15vh;
 }
 
-/* Footer and foot section */
 .foot {
     gap: 2vw;
     display: flex;
     align-items: center;
+    font-family: large;
 }
 .foot h3 {
     padding-top: 3vh;
@@ -219,8 +330,6 @@ a {
 .foot img {
     width: 30vw;
 }
-
-/* Underline Animation */
 .underline {
     width: 0px;
     height: 4px;
@@ -230,18 +339,8 @@ a {
     animation: growUnderline 0.6s ease-out forwards;
     animation-delay: 0.3s;
 }
-@keyframes growUnderline {
-    from {
-        width: 0;
-        opacity: 0;
-    }
-    to {
-        width: 25vw;
-        opacity: 1;
-    }
-}
 
-/* Footer */
+
 footer {
     padding-top: 4vh;
     width: 100vw;
@@ -250,7 +349,7 @@ footer {
     align-items: center;
 }
 footer p {
-    font-size: 100%;
+    font-size: large;
 }
 .footer {
     display: flex;
@@ -281,16 +380,14 @@ footer p {
 #socials {
     display: block;
     gap: 1.5rem;
-    line-height: 1.5em;
     color: #C2CA83;
 }
 #socials p {
-    font-size: medium;
+    font-size: large;
 }
 #socials h6 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
-    font-weight: 400;
+    margin-bottom: 1px;
 }
 .icons {
     display: flex;
@@ -301,3 +398,25 @@ footer p {
 .icons i {
     font-size: 0.8rem;
 }
+
+
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 4px;
+    }
+    
+    .header, .footer {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 8px;
+    }
+    
+    .sidebar {
+      display: none;
+    }
+  }
