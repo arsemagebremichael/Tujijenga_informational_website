@@ -12,28 +12,19 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="navbar">
         <div class="nav-center">
             <div class="nav-header">
-                <div class="image">
+                <a href="#">
                     <img src="images/logo.png" class="logo" alt="logo" />
-                </div>
-                <div class="list">
-                    <ul class="links showLinks">
-                        <li>
-                            <a href="#"> Home </a>
-                        </li>
-                        <li>
-                            <a href="services.html"> Services</a>
-                        </li>
-                        <li>
-                            <a href="how_it_works.html"> How Tujijenge Works</a>
-                        </li>
-                        <li>
-                            <a href="aboutUs.html"> About Us</a>
-                        </li>
-                    </ul>
-                </div>
+                </a>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="how_it_works.html">How Tujijenge Works</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -44,13 +35,16 @@
     </div>
 
     <div class="popup" id="myPopup">
-        <span class="popuptext" id="myPopupText">Coming soon!</span>
-        <button onclick="hidePopup()">Close</button>
+        <div class="popuptext" id="myPopupText">
+            <span>Coming soon!</span>
+            <img src="images/home.png" alt="">
+        </div>
+        <button class="close" onclick="hidePopup()">Close</button>
     </div>
     <div class="tujijenge">
         <img src="images/tujijenge.png" alt="tujijenge logo">
     </div>
-    <div class="make_us_different">
+    <div data-aos="zoom-in-down" class="make_us_different">
         <h2>What Makes us Different?</h2>
         <div class="underline"></div>
         <p>Empower small-scale vegetable vendors, access to suppliers, and training organizations (GAIN) to connect,
@@ -67,7 +61,7 @@
                 </div>
             </div>
             <div class="home_img">
-            <img src="images/home.png" alt="home page">
+                <img src="images/home.png" alt="home page">
             </div>
             <div class="sevice">
                 <div class="specific_service">
@@ -80,12 +74,14 @@
                 </div>
             </div>
         </div>
+        <div class="work_with_us">
+            <h2>Work with us</h2>
+            <div class="underline"></div>
 
-        <h2>Work with us</h2>
-        <div class="underline"></div>
+        </div>
 
-        <p>Tujijenge provides stake holder connection to communities of Mama Mbogas, making a thriving environment for
-            Mama Mbogas and suppliers.</p>
+
+
         <div class="foot">
             <h3>Get</h3> <img src="images/tujijenge.png" alt="tujijenge">
         </div>

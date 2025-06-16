@@ -7,46 +7,61 @@
 body{
     overflow-x: hidden;
 }
-.logo {
-    height: 4rem;
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+
+  }
+  
+  .logo {
+    height: 5vh;
     width: auto;
-}
-.nav-center {
+    display: block;
+  }
+  
+  .nav-center {
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+  }
+  
+  .nav-header {
     display: flex;
-    background-color: white;
-    height: auto;
-}
-.links {
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .links {
     display: flex;
-    gap: 6em;
-    list-style-type: none;
-}
-.links li {
-    margin: auto;
-}
-.links li a {
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .links li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .links li a {
     text-decoration: none;
     color: #084236;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 24px;
-}
-.nav-header {
-    display: flex;
-    margin:1% 0 0 0;
-    justify-content: space-between;
-    gap: 50rem;
-}
-.links :hover {
-    color: #C2CA83;
-}
-a {
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
+    font-size: large;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .links li a:hover {
+    color: #C2CA83;
+    background: rgba(194, 202, 131, 0.08);
+  }
 
 .hero{
     display: flex;
