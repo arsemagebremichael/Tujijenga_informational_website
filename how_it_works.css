@@ -343,3 +343,395 @@ footer {
         font-size: 0.8rem;
     }
 }
+
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #084236;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle:hover {
+    color: #C2CA83;
+    transform: scale(1.1);
+}
+
+
+.links {
+    transition: all 0.3s ease-out;
+}
+
+
+.nav-toggle.active i::before {
+    content: "\f00d"; 
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+        z-index: 101;
+    }
+
+    .nav-header {
+        position: relative;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 4rem 1rem 1rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 100;
+        height: 100vh;
+    }
+
+    .links.show {
+        display: flex;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .links li {
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(8, 66, 54, 0.1);
+    }
+
+    .links li:last-child {
+        border-bottom: none;
+    }
+
+    .logo {
+        height: 4vh;
+        margin-left: 1rem;
+        position: relative;
+        z-index: 102;
+    }
+
+ 
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-position: center;
+        
+        h1 {
+            margin: 5vh 0;
+            font-size: 6vw;
+            text-align: center;
+        }
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-center {
+        padding: 0;
+    }
+
+    .nav-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .links li a {
+        font-size: medium;
+        padding: 0.5rem 0;
+    }
+
+    .how_tujijenge_works {
+        margin: 10vh 0 0 0;
+        padding: 1rem;
+        width: 100%;
+        
+        img {
+            width: 80vw;
+            margin: 1rem auto;
+            display: block;
+        }
+
+        #list-number {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: medium;
+        }
+    }
+
+    .underline {
+        width: 50% !important;
+    }
+
+    .register, .join_a_community, .ordering, .inventory_management {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .signin, .gain {
+        flex-direction: column;
+        padding-left: 0;
+        margin-right: 0;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        
+        p {
+            text-align: left;
+        }
+    }
+
+    .signin-pic {
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .community_pictures, .order-screenshots, 
+    .trainings-screenshots, .inventory-screenshots {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        
+        img {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    .create-community {
+        margin: 1rem 0;
+        
+        img {
+            width: 90%;
+        }
+    }
+
+    .using_services {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        
+        h2 {
+            font-size: 3vh;
+        }
+    }
+
+    .vl {
+        display: none;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .contacts {
+        margin-right: 0;
+        text-align: center;
+        
+        p {
+            width: 100%;
+        }
+    }
+
+    #socials {
+        text-align: center;
+        
+        .icons {
+            justify-content: center;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 640px) {
+    body {
+        h1 {
+            margin: 6vh 0;
+            font-size: 5vw;
+            text-align: center;
+        }
+    }
+
+    .nav-center {
+        padding: 0.5rem 1rem;
+    }
+
+    .links {
+        gap: 1rem;
+    }
+
+    .how_tujijenge_works {
+        margin: 10vh 0 0 0;
+        padding: 1.5rem;
+        width: 100%;
+        
+        img {
+            width: 40vw;
+        }
+
+        #list-number {
+            font-size: 3em;
+        }
+    }
+
+    .community_pictures, .order-screenshots, 
+    .trainings-screenshots, .inventory-screenshots {
+        gap: 2rem;
+        margin-bottom: 3rem;
+        
+        img {
+            width: 25vw;
+        }
+    }
+
+    .create-community img {
+        width: 50vw;
+    }
+
+    .signin {
+        padding-left: 40vw;
+    }
+
+    .signin-pic {
+        padding-left: 45vw;
+    }
+
+    .gain {
+        margin-right: 5vh;
+    }
+
+    .footer {
+        gap: 5rem;
+        padding: 1.5rem;
+    }
+
+    .contacts {
+        margin-right: 2rem;
+    }
+}
+
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+    .how_tujijenge_works {
+        img {
+            width: 30vw;
+        }
+    }
+
+    .community_pictures, .order-screenshots, 
+    .trainings-screenshots, .inventory-screenshots {
+        gap: 3rem;
+        
+        img {
+            width: 20vw;
+        }
+    }
+
+    .signin {
+        padding-left: 50vw;
+    }
+
+    .signin-pic {
+        padding-left: 55vw;
+    }
+
+    .footer {
+        gap: 80vh;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .how_tujijenge_works {
+        img {
+            width: 25vw;
+        }
+    }
+
+    .community_pictures, .order-screenshots, 
+    .trainings-screenshots, .inventory-screenshots {
+        gap: 4rem;
+        
+        img {
+            width: 15vw;
+        }
+    }
+
+    .signin {
+        padding-left: 55vw;
+    }
+
+    .signin-pic {
+        padding-left: 60vw;
+    }
+
+    .footer {
+        gap: 100vh;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    .how_tujijenge_works {
+        img {
+            width: 15vw;
+        }
+    }
+
+    .community_pictures, .order-screenshots, 
+    .trainings-screenshots, .inventory-screenshots {
+        gap: 10vh;
+        
+        img {
+            width: 10vw;
+        }
+    }
+
+    .footer {
+        gap: 120vh;
+    }
+}
+
+
+@media only screen and (min-width: 1280px) {
+    
+}
