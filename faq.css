@@ -26,7 +26,7 @@ body {
     src: url(fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf);
 }
 
-/.navbar {
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
