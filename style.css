@@ -197,6 +197,7 @@ body {
 }
 
 .tujijenge {
+    display:flex;
     justify-content: center;
 }
 
