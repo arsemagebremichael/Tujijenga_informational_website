@@ -1,794 +1,852 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-body{
+  }
+  body {
     overflow-x: hidden;
-}
-.navbar {
+    font-family: 'Nunito', sans-serif;
+  }
+  .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: #fff;
     z-index: 10;
-
   }
-  
   .logo {
     height: 5vh;
     width: auto;
     display: block;
   }
-  
   .nav-center {
     margin: 0 auto;
     padding: 0.5rem 2rem;
   }
-  
   .nav-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  
   .links {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  
   .links li {
     display: flex;
     align-items: center;
   }
-  
   .links li a {
     text-decoration: none;
     color: #084236;
-    font-family: "Nunito", sans-serif;
-    font-size: large;
+    font-size: 1rem;
     font-weight: 500;
-    transition: color 0.2s;
+    transition: color 0.2s, background 0.2s;
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
   }
-  
   .links li a:hover {
     color: #C2CA83;
     background: rgba(194, 202, 131, 0.08);
   }
-
-.hero{
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 20;
+    padding: 0.5rem;
+  }
+  .hamburger-bars {
+    display: flex;
+    flex-direction: column;
+  }
+  .hamburger-bars span {
+    height: 2px;
+    width: 20px;
+    background: #084236;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .hamburger-close {
+    color: #084236;
+    font-size: 1.5rem;
+  }
+  .hero {
     display: flex;
     justify-content: center;
-  align-items: center; 
-    background-image: url(fonts-and-images/stall.jpg);
-    background-size: cover;
-    /* background-size: 100% 100%; */
-    height: 100vh;
-    background-color: #4e6661;
-    background-blend-mode: multiply;
-    background-position: center;
-    width:100vw;
-    height: 40vh;
-    font-family: nunito;
-
-
-    
-}
-.hero p{
-font-size: 500%;
-color:#C2CA83;
-font-weight: bold;
-}
-.vision-image{
-    width: auto;
-    height: 20vh;
-    float: right;
-    /* margin-right: 30vh; */
-}
-.mission-image{
-    width: auto;
-    height: 30vh;
-    float: left;
-    /* margin-left: 20vh; */
-}
-.mission{
-    height: 30vh;
-    text-align: right;
-    /* border: rgb(128, 95, 91) solid; */
-}
-.mission h1{
-    /* text-align: center; */
-    font-size: xxx-large;
-    font-family: "Nunito", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    text-align: center;
-}
-.vision{
-    height: 30vh;
-    text-align: left;
-    /* border: salmon solid; */
-    
-}
-.vision h1{
-    text-align: center;
-    font-size: xxx-large;
-    font-family: "Nunito", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-.mission-text{
-    font-size: x-large;
-    font-family: "Nunito", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: left;
-    width: auto;
-    /* border: solid; */
-    float: right;
-    margin-top: 10vh;
-    line-height: 6vh;
-   
-    justify-content: center;
-}
-.vision-text{
-    font-size: x-large;
-    font-family: "Nunito", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: left;
-    width: auto;
-    /* border: solid; */
-    float: left;
-    margin-top: 10vh;
-    line-height: 6vh;
-
-}
-
-
-section{
-    /* padding: 0 50vh; */
-    /* border: solid black; */
-    width: 60vw;
-    transform: translate(30%);
-    margin-bottom: 20vh;
-}
-  footer {
-    padding-top: 8vh;
-    height: auto;
-    width: auto;
-    margin: 0;
-    background-color: #084236;
-    font-family: 'Poppins', sans-serif;
-    color: white;
     align-items: center;
-    p {
-     font-size: 100%;
-
-    }
-}
-.footer {
-    /* justify-content: flex-end; */
+    background-image: url(about-us-fonts-and-images/stall.jpg);
+    background-size: cover;
+    background-color: rgba(18, 56, 18, 0.7);
+    background-blend-mode: darken;
+    background-position: center;
+    width: 100vw;
+    height: 60vh;
+    margin-bottom: 15vh;
+  }
+  .hero p {
+    font-size: 500%;
+    color: #C2CA83;
+    font-weight: bold;
+  }
+  .vision, .mission {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    margin: 2rem auto;
+    gap: 2rem;
+  }
+  
+  .vision-text, .mission-text {
+    flex: 1;
+    text-align: left;
+    margin: 0;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    
+  }
+  .vision-text h1, .mission-text h1 {
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+  .vision-text p, .mission-text p {
+    font-size: 1em;
+    margin-top: 1rem;
+  }
+  .mission img{
+    flex: 1;
+    width: 100px;
+    height: auto;
+    margin: 0;
+  }
+  .vision img{
+    width:25vh;
+  }
+  
+  .underline1, .underline2 {
+    width: 6em;
+    height: 4px;
+    background-color: #084236;
+    margin: 0.3em 0 1em;
+    border-radius: 2px;
+  }
+  section {
+    width: 90vw;
+    margin: 0 auto 10vh;
+  }
+  footer {
+    margin: 0;
+    padding: 14vh 0 5vh;
+    width: 100%;
+    background-color: #084236;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer {
     display: flex;
     justify-content: space-between;
-    width: 100vw;
-    padding: 0 1em;
-    margin: 0;
-    padding-bottom: 5em;
-    /* background-color: #084236; */
-    color: white;
-    font-family: nunito;
-    align-items: center;
-    
-}
-.contacts {
-    /* margin-top: 2; */
-    /* text-align: right; */
-    margin-right: 10rem;
-    i {
-        color: white;
-    }
-}
-.contacts h6{
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 1rem; 
-    font-family: nunito; 
-    color: #C2CA83; 
-}
-.contacts p {
-    color: white;
-    margin: 0.5rem 0;
-    width: 15em;
-    color: #C2CA83;
-}
-
-#socials {
-    /* text-align: center; */
-    color: white;
-    display: block;
-    /* justify-content: center; */
-    /* align-items: center; */
-    gap: 1.5rem;
-    line-height: 1.5em;
-    color: #C2CA83;
-    /* right: 0; */
-    /* margin-right: 0; */
-    a {
-        color: white;
-    }
-    p {
-        font-size: medium;
-    }
-    h6{
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        font-weight: 400;
-    }
-    
-
-}
-
-.icons{
-    display: flex;
-    gap: 20px;
-    /* justify-content: center; */
-    align-items: center;
+    width: 90vw;
+    max-width: 1200px;
     margin: 0 auto;
-    /* margin-right: 0; */
-    i{
-        font-size: 0.8rem;
+    padding: 0 2rem;
+    color: #C2CA83;
+  }
+  .contacts {
+    margin-right: 1rem;
+  }
+  .contacts h6, .socials h6 {
+    font-size: 37px;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+  .contacts p {
+    font-size: 20px;
+    line-height: 2;
+    max-width: 15em;
+    margin: 0.5rem 0;
+  }
+  .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .icon-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+  }
+  .icon-item:hover {
+    transform: translateY(-3px);
+  }
+  .icon-item i {
+    font-size: 16px;
+  }
+  .icon-item p {
+    font-size: 20px;
+    margin: 0;
+  }
+  @font-face {
+    font-family: 'Nunito';
+    src: url(about-us-fonts-and-images/Nunito-VariableFont_wght.ttf);
+  }
+  @font-face {
+    font-family: 'PlusJakartaSans';
+    src: url(about-us-fonts-and-images/PlusJakartaSans-VariableFont_wght.ttf);
+  }
+  /* Desktop and larger screens */
+  @media screen and (min-width: 1024px) {
+    .vision-text, .mission-text {
+        font-size: 1.6em;
     }
-}
-
-@font-face {
-    font-family: nunito;
-    src: url(fonts-and-images/Nunito-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: plus;
-    src: url(fonts-and-images/PlusJakartaSans-VariableFont_wght.ttf);
-}
-.underline1{
-    width: 8em;
-    height: 4px;
-    background-color: #084236;
-    margin: 0 auto 2rem auto;
-    border-radius: 2px;
-    
-   
-}
-.underline2{
-    width: 8em;
-    height: 4px;
-    background-color: #084236;
-    margin: 0 auto 2rem auto;
-    border-radius: 2px;
-}
-.nav-toggle{
-    display: none;
-}
-.nav-toggle:checked + .nav{
-    display: none;
-}
-@media (max-width: 1500px){
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    
+    .vision-text h1, .mission-text h1 {
+        font-size: 1.6em;
     }
-    body{
-        overflow-x: hidden;
+    .vision-text p, .mission-text p {
+        font-size: 1.2em;
     }
-    .logo {
-        height: 5vh;
-        width: auto;
-        display: block;
-      }
-      
-      .nav-center {
-        margin: 0 auto;
-        padding: 0.5rem 2rem;
-      }
-      
-      .nav-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      
-      .links {
-        display: flex;
-        gap: 2.5rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      
-      .links li {
-        display: flex;
-        align-items: center;
-      }
-      
-      .links li a {
-        text-decoration: none;
-        color: #084236;
-        font-family: "Nunito", sans-serif;
-        font-size: large;
-        font-weight: 500;
-        transition: color 0.2s;
-        padding: 0.25rem 0.5rem;
-        border-radius: 4px;
-      }
-      
-      .links li a:hover {
-        color: #C2CA83;
-        background: rgba(194, 202, 131, 0.08);
-      }
-    
-    
-    .hero{
-        width:100vw;
-        height: 80vh;
-        font-family: nunito;
-    
-    
-        
-    }
-    .hero p{
-    font-size: 500%;
-    color:#C2CA83;
-    font-weight: bold;
-    }
-    .vision-image{
-        width: auto;
-        height: 20vh;
-        float: right;
-        margin-top: 0rem;
-        /* margin-right: 30vh; */
-    }
-    .mission-image{
-        width: auto;
-        height: 30vh;
-        float: left;
-        /* margin-left: 20vh; */
-    }
-    .mission{
-        height: 30vh;
-        text-align: right;
-        /* border: rgb(128, 95, 91) solid; */
-    }
-    .mission h1{
-        /* text-align: center; */
-        font-size: 30px;
-        font-family: "Nunito", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        text-align: center;
-    }
-    .vision{
-        height: 30vh;
-        text-align: left;
-        /* border: salmon solid; */
-        
-    }
-    .vision h1{
-        text-align: center;
-        font-size: 30px;
-        font-family: "Nunito", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-    }
-    .mission-text{
-        font-size: 20px;
-        font-family: "Nunito", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        text-align: left;
-        width: auto;
-        /* border: solid; */
-        float: right;
-        margin-top: 10vh;
-        line-height: 6vh;
-       
-        justify-content: center;
-    }
-    .vision-text{
-        font-size: 20px;
-        font-family: "Nunito", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        text-align: left;
-        width: auto;
-        /* border: solid; */
-        float: left;
-        margin-top: 10vh;
-        line-height: 6vh;
-    
-    }
-    
-    
-    section{
-        /* padding: 0 50vh; */
-        /* border: solid black; */
-        width: 60vw;
-        transform: translate(30%);
-        margin-bottom: 20vh;
-    }
-      footer {
-        padding-top: 8vh;
+    .vision img, .mission img {
+        max-width: 20%;
         height: auto;
-        width: auto;
-        margin: 0;
-        margin-top: 60vh;
-        background-color: #084236;
-        font-family: 'Poppins', sans-serif;
-        color: white;
+    }
+   
+    .underline1, .underline2 {
+        margin: 0.3em 0 1em;
+    }
+    .mission-text {
+        order: 1;
+    }
+    .mission img {
+        order: 0;
+    }
+    .vision, .mission {
+        width: 100%;
+        max-width: 1200px;
+        gap: 3rem;
+        display: flex;
+    }
+    .vision img, .mission img{
+        max-width: 35%;
+        height: auto;
+        display: block; 
+    }
+  }
+  
+  @media screen and (width: 1024px) and (height: 768px) and (-webkit-device-pixel-ratio: 2) {
+    .vision img, .mission img {
+        display: none;
+    }
+    .vision, .mission {
+        display: block;
+    }
+    .vision-text, .mission-text {
+        width: 100%;
+      
+        text-align: center;
+    }
+    .vision-text h1, .mission-text h1 {
+        text-align: center;
+    }
+    .underline1, .underline2 {
+        margin: 0.3em auto 2em;
+    }
+  }
+  /* Mobile and smaller screens */
+  @media screen and (max-width: 1023px) {
+    .vision, .mission {
+        flex-direction: column;
         align-items: center;
-        p {
-         font-size: 100%;
-    
-        }
+        text-align: center;
+    }
+    .vision-text, .mission-text {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .vision img, .mission img {
+        display: none; /* Hide images */
+    }
+    .vision-text h1, .mission-text h1 {
+        font-size: 1.4em;
+    }
+    .vision-text p, .mission-text p {
+        font-size: 1em;
+    }
+    .underline1, .underline2 {
+        margin: 0.3em auto 1em;
+    }
+    .hero p {
+        font-size: 4rem;
     }
     .footer {
-        /* justify-content: flex-end; */
-        display: flex;
-        gap: 20px;
-        justify-content: space-between;
-        width: 100vw;
-        padding: 0 1em;
-        margin: 0;
-        padding-bottom: 5em;
-        /* background-color: #084236; */
-        color: white;
-        font-family: nunito;
+        flex-direction: column;
         align-items: center;
-        /* margin-top: 200vh; */
-        
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem 5%;
+    }
+    .contacts, .socials {
+        width: 100%;
+        margin-right: 0;
     }
     .contacts {
-        /* margin-top: 2; */
-        /* text-align: right; */
-        margin-right: 10rem;
-        i {
-            color: white;
-        }
+        align-items: center;
     }
-    .contacts h6{
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin-bottom: 1rem; 
-        font-family: nunito; 
-        color: #C2CA83; 
+    .contacts h6, .socials h6 {
+        font-size: 2rem;
+    }
+    .contacts p, .icon-item p {
+        font-size: 1.2rem;
     }
     .contacts p {
-        color: white;
-        margin: 0.5rem 0;
-        width: 15em;
-        color: #C2CA83;
+        max-width: 20rem;
     }
-    
-    #socials {
-        /* text-align: center; */
-        color: white;
-        display: block;
-        /* justify-content: center; */
-        /* align-items: center; */
-        gap: 1.5rem;
-        line-height: 1.5em;
-        color: #C2CA83;
-        /* right: 0; */
-        /* margin-right: 0; */
-        a {
-            color: white;
-        }
-        p {
-            font-size: medium;
-        }
-        h6{
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            font-weight: 400;
-        }
-        
-    
+    .icon-item i {
+        font-size: 1.2rem;
     }
-    
-    .icons{
-        display: flex;
-        gap: 20px;
-        /* justify-content: center; */
+    .socials {
         align-items: center;
-        margin: 0 auto;
-        /* margin-right: 0; */
-        i{
-            font-size: 0.8rem;
-        }
     }
-    
-    @font-face {
-        font-family: nunito;
-        src: url(fonts-and-images/Nunito-VariableFont_wght.ttf);
-    }
-    @font-face {
-        font-family: plus;
-        src: url(fonts-and-images/PlusJakartaSans-VariableFont_wght.ttf);
-    }
-    .underline1{
-        width: 8em;
-        height: 4px;
-        background-color: #084236;
-        margin: 0 auto 2rem auto;
-        border-radius: 2px;
-        
-       
-    }
-    .underline2{
-        width: 8em;
-        height: 4px;
-        background-color: #084236;
-        margin: 0 auto 2rem auto;
-        border-radius: 2px;
-    }
-    .nav-toggle{
-        display: none;
-    }
-    .nav-toggle:checked + .nav{
-        display: none;
-    }
-}
-
-
-@media (max-width: 800px) {
-   
-   body{
-    overflow-x: hidden;
-   }
-    .nav-toggle{
-        display: flex;
-        /* float: right; */
-        position:absolute;
+    .icons {
         align-items: center;
-        justify-content: center;
-        right: 20px;
-        /* left: 20px; */
-        top: 20px;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        cursor: pointer;
-        color:  #084236;
     }
-    .links{
-        display: none;
-        flex-direction: column;
-        width: 100vw;
-        margin-top: 2em;
-        position: absolute;
-        top: 2.1em;
-        left: 0;
-        background: rgb(247, 244, 244);
-        padding: 1em;
-        border-radius: 0 0 10px;
-        height: auto;
-        overflow-y: auto;
-        object-fit: contain;
+  }
+  @media screen and (max-width: 768px) {
+    .vision img, .mission img {
+        max-width: 200px;
     }
-    .links.show-links{
-        display: block;
+    .vision-text, .mission-text {
+        font-size: 1.1em;
     }
-    
-  
-    .nav-center{
-        flex-direction: row;
-        height: auto;
-        
-        /* width: 10em; */
-        /* justify-content: space-between; */
+    .vision-text h1, .mission-text h1 {
+        font-size: 1.3em;
     }
-  
-    .logo{
+    .vision-text p, .mission-text p {
+        font-size: 0.9em;
+    }
+    .hero p {
+        font-size: 3.5rem;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .vision img, .mission img {
+        max-width: 150px;
+    }
+    .vision-text, .mission-text {
+        font-size: 1em;
+    }
+    .vision-text h1, .mission-text h1 {
+        font-size: 1.2em;
+    }
+    .vision-text p, .mission-text p {
+        font-size: 0.8em;
+    }
+    .hero p {
+        font-size: 2.5rem;
+    }
+    .underline1, .underline2 {
         width: 4em;
-        height: auto;
     }
-    .hero{
+  }
+  @media (max-width: 740px) {
+    .hamburger {
         display: flex;
-        justify-content: center;
-      align-items: center; 
-        background-image: url(fonts-and-images/stall.jpg);
-        /* background-size: cover; */
-        background-position: center;
-        width:100vw;
-        height: 50vh;
-        font-family: nunito;
-    
-    
-        
     }
-    .hero p{
-    font-size: 50px;
-    color:#C2CA83;
+    .links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: max-height 0.3s ease;
+        padding-left: 3rem;
+    }
+    .links.open {
+        max-height: 350px;
+        padding: 0.5rem 0;
+    }
+    .links li {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0.8rem 1rem;
+    }
+  }
+  
+  
+  
+  @media (max-width: 400px) {
+    .nav-center {
+        padding: 0.5rem 1rem;
+    }
+    .logo {
+        height: 4vh;
+    }
+    .contacts h6, .socials h6 {
+        font-size: 1.25rem;
+    }
+    .contacts p, .icon-item p {
+        font-size: 0.9rem;
+    }
+    .contacts p {
+        max-width: 16rem;
+    }
+    .icon-item i {
+        font-size: 0.9rem;
+    }
+    .icon-item {
+        gap: 10px;
+    }
+  }
+  @media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+    }
+    .links li a {
+        font-size: 1.1em;
+    }
+  }* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    overflow-x: hidden;
+    font-family: 'Nunito', sans-serif;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+  }
+  .logo {
+    height: 5vh;
+    width: auto;
+    display: block;
+  }
+  .nav-center {
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .links li {
+    display: flex;
+    align-items: center;
+  }
+  .links li a {
+    text-decoration: none;
+    color: #084236;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s, background 0.2s;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+  .links li a:hover {
+    color: #C2CA83;
+    background: rgba(194, 202, 131, 0.08);
+  }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 20;
+    padding: 0.5rem;
+  }
+  .hamburger-bars {
+    display: flex;
+    flex-direction: column;
+  }
+  .hamburger-bars span {
+    height: 2px;
+    width: 20px;
+    background: #084236;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .hamburger-close {
+    color: #084236;
+    font-size: 1.5rem;
+  }
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(about-us-fonts-and-images/stall.jpg);
+    background-size: cover;
+    background-color: rgba(18, 56, 18, 0.7);
+    background-blend-mode: darken;
+    background-position: center;
+    width: 100vw;
+    height: 60vh;
+    margin-bottom: 15vh;
+  }
+  .hero p {
+    font-size: 500%;
+    color: #C2CA83;
     font-weight: bold;
+  }
+  
+  .vision, .mission {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    margin: 2rem auto;
+    gap: 2rem;
+  }
+  .vision-text, .mission-text {
+    flex: 1;
+    text-align: left;
+    margin: 0;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+  }
+  .vision-text h1, .mission-text h1 {
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+  .vision-text p, .mission-text p {
+    font-size: 1em;
+    margin-top: 1rem;
+  }
+  
+  
+  .underline1, .underline2 {
+    width: 6em;
+    height: 4px;
+    background-color: #084236;
+    margin: 0.3em 0 1em;
+    border-radius: 2px;
+  }
+  section {
+    width: 90vw;
+    margin: 0 auto 10vh;
+  }
+  footer {
+    margin: 0;
+    padding: 14vh 0 5vh;
+    width: 100%;
+    background-color: #084236;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    color: #C2CA83;
+  }
+  .contacts {
+    margin-right: 1rem;
+  }
+  .contacts h6, .socials h6 {
+    font-size: 37px;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+  .contacts p {
+    font-size: 20px;
+    line-height: 2;
+    max-width: 15em;
+    margin: 0.5rem 0;
+  }
+  .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .icon-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+  }
+  .icon-item:hover {
+    transform: translateY(-3px);
+  }
+  .icon-item i {
+    font-size: 16px;
+  }
+  .icon-item p {
+    font-size: 20px;
+    margin: 0;
+  }
+  @font-face {
+    font-family: 'Nunito';
+    src: url(about-us-fonts-and-images/Nunito-VariableFont_wght.ttf);
+  }
+  @font-face {
+    font-family: 'PlusJakartaSans';
+    src: url(about-us-fonts-and-images/PlusJakartaSans-VariableFont_wght.ttf);
+  }
+  /* Desktop and larger screens */
+  @media screen and (min-width: 1024px) {
+    .vision-text, .mission-text {
+        font-size: 1.4em;
     }
-    .vision-image{
-        width: auto;
-        height: 15vh;
-        /* float: right; */
-        /* margin-right: 30vh; */
+    .vision-text h1, .mission-text h1 {
+        font-size: 1.6em;
     }
-    .mission-image{
-        width: auto;
-        height: 20vh;
-        /* float: left; */
-        /* margin-left: 20vh; */
+    .vision-text p, .mission-text p {
+        font-size: 1em;
     }
-    .mission{
-        height: 30vh;
-        text-align: right;
-        /* border: rgb(128, 95, 91) solid; */
+  
+    .underline1, .underline2 {
+        margin: 0.3em 0 1em;
     }
-    .mission h1{
-        /* text-align: center; */
-        font-size: 30px;
-        font-family: "Nunito", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        text-align: center;
+    .mission-text {
+        order: 1;
     }
-    .vision{
-        height: 30vh;
-        text-align: center;
-        /* border: salmon solid; */
-        
+    .mission img {
+        order: 0;
     }
-    .vision h1{
-        text-align: center;
-        font-size: 30px;
-        font-family: "Nunito", sans-serif;
-        font-weight: 700;
-        font-style: normal;
+    .vision, .mission {
+        width: 100%;
+        max-width: 1200px;
+        gap: 3rem;
+        display: flex;
     }
-    .mission-text{
-        font-size: 20px;
-        font-family: "Nunito", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        text-align: left;
-        width: auto;
-        /* border: solid; */
-        float: right;
-        margin-top: 10vh;
-        line-height: 6vh;
-       
-        justify-content: center;
+    .vision img {
+        max-width: 30%;
+        height: auto;
+        display: block; 
     }
-    .vision-text{
-        font-size: 20px;;
-        font-family: "Nunito", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        text-align: left;
-        width: auto;
-        /* border: solid; */
-        float: left;
-        margin-top: 10vh;
-        line-height: 6vh;
-    
+    .mission img{
+      width: 30vh;
     }
-    main{
-        height:auto;
-    }
-    
-    
     section{
-        /* padding: 0 50vh; */
-        /* border: solid black; */
-        width: 60vw;
-        transform: translate(30%);
-        margin-bottom: 20vh;
-        height: auto;
+      padding: 0 3rem;
     }
-      footer {
-        padding-top: 8vh;
-        height: auto;
-        width: auto;
-        margin: 0;
-        margin-top: 25em;
-        background-color: #084236;
-        font-family: 'Poppins', sans-serif;
-        color: white;
+  }
+  
+  @media screen and (width: 1024px) and (height: 768px) and (-webkit-device-pixel-ratio: 2) {
+    .vision img, .mission img {
+        display: none;
+    }
+    .vision, .mission {
+        display: block;
+    }
+    .vision-text, .mission-text {
+        width: 100%;
+        text-align: center;
+    }
+    .vision-text h1, .mission-text h1 {
+        text-align: center;
+    }
+    .underline1, .underline2 {
+        margin: 0.3em auto 1em;
+    }
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .vision, .mission {
+        flex-direction: column;
         align-items: center;
-        p {
-         font-size: 100%;
-    
-        }
+        text-align: center;
+    }
+    .vision-text, .mission-text {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .vision img, .mission img {
+        display: none; 
+    }
+    .vision-text h1, .mission-text h1 {
+        font-size: 1.4em;
+    }
+    .vision-text p, .mission-text p {
+        font-size: 1em;
+    }
+    .underline1, .underline2 {
+        margin: 0.3em auto 1em;
+    }
+    .hero p {
+        font-size: 4rem;
     }
     .footer {
-        /* justify-content: flex-end; */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem 5%;
+    }
+    .contacts, .socials {
+        width: 100%;
+        margin-right: 0;
+    }
+    .contacts {
+        align-items: center;
+    }
+    .contacts h6, .socials h6 {
+        font-size: 2rem;
+    }
+    .contacts p, .icon-item p {
+        font-size: 1.2rem;
+    }
+    .contacts p {
+        max-width: 20rem;
+    }
+    .icon-item i {
+        font-size: 1.2rem;
+    }
+    .socials {
+        align-items: center;
+    }
+    .icons {
+        align-items: center;
+    }
+    .underline1, .underline2{
+      margin: 0 0 auto -0.5em;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .vision img, .mission img {
+        max-width: 200px;
+    }
+    .vision-text, .mission-text {
+        font-size: 1.1em;
+    }
+    .vision-text h1, .mission-text h1 {
+        font-size: 1.3em;
+    }
+    .vision-text p, .mission-text p {
+        font-size: 0.9em;
+    }
+    .hero p {
+        font-size: 3.5rem;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .vision img, .mission img {
+        max-width: 150px;
+    }
+    .vision-text, .mission-text {
+        font-size: 1em;
+    }
+    .vision-text h1, .mission-text h1 {
+        font-size: 1.2em;
+    }
+    .vision-text p, .mission-text p {
+        font-size: 0.8em;
+    }
+    .hero p {
+        font-size: 2.5rem;
+    }
+    .underline1, .underline2 {
+        width: 4em;
+        display: none;
+    }
+  }
+  @media (max-width: 740px) {
+    .hamburger {
         display: flex;
-        justify-content: space-between;
-        width: 100vw;
-        padding: 0 1em;
-        margin: 0;
-        padding-bottom: 5em;
-        /* background-color: #084236; */
-        color: white;
-        font-family: nunito;
-        align-items: center;
-        
     }
-
-  
-    
+    .links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: max-height 0.3s ease;
+        padding-left: 3rem;
     }
-    
-
-@media (max-width: 600px) {
-    body{
-        overflow-x: hidden;
-       }
-        
-        
-          footer {
-            padding-top: 8vh;
-            height: auto;
-            width: auto;
-            margin: 0;
-            margin-top: 30em;
-            background-color: #084236;
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            align-items: center;
-            p {
-             font-size: 100%;
-        
-            }
-        }
-        .footer {
-            /* justify-content: flex-end; */
-            display: block;
-            justify-content: space-between;
-            width: 100vw;
-            padding: 0 1em;
-            margin: 0;
-            padding-bottom: 5em;
-            /* background-color: #084236; */
-            color: white;
-            font-family: nunito;
-            align-items: center;
-            
-        }
-    
-      
-        
-        }
-        
-@media (width: 344px) {
-    footer {
-        padding-top: 8vh;
-        height: auto;
-        width: auto;
-        margin: 0;
-        margin-top: 40em;
-        background-color: #084236;
-        font-family: 'Poppins', sans-serif;
-        color: white;
-        align-items: center;
-        p {
-         font-size: 100%;
-    
-        }
+    .links.open {
+        max-height: 350px;
+        padding: 0.5rem 0;
     }
-}
-    
-
-
-    
+    .links li {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0.8rem 1rem;
+    }
+    .underline1, .underline2{
+      display: none;
+    }
+  }
+  @media (max-width: 400px) {
+    .nav-center {
+        padding: 0.5rem 1rem;
+    }
+    .logo {
+        height: 4vh;
+    }
+    .contacts h6, .socials h6 {
+        font-size: 1.25rem;
+    }
+    .contacts p, .icon-item p {
+        font-size: 0.9rem;
+    }
+    .contacts p {
+        max-width: 16rem;
+    }
+    .icon-item i {
+        font-size: 0.9rem;
+    }
+    .icon-item {
+        gap: 10px;
+    }
+    .underline1, .underline2 {
+      display: none;
+    }
+  }
+  @media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+    }
+    .links li a {
+        font-size: 1.1em;
+    }
+  }

@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tujijenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bbdf563758.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 
 <body>
@@ -19,133 +26,129 @@
                     <img src="images/logo.png" class="logo" alt="logo" />
                 </a>
                 <button class="hamburger" id="nav-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="hamburger-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <i class="fa-solid fa-times hamburger-close" style="display: none;"></i>
                 </button>
                 <ul class="links" id="nav-links">
-                    <li ><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="how_it_works.html">How Tujijenge Works</a></li>
+                    <li><a href="how_it_works.html">How Tujijenge Works?</a></li>
                     <li><a href="aboutUs.html">About Us</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="hero_page">
-        <h1>Empower small-scale vegetable vendor communities using technology</h1>
+        <h1>Empower small-scale vegetable vendor communities</h1>
         <button type="button" onclick="showPopup()"><i class="fa-brands fa-google-play"></i>Get it on Play
             Store</button>
     </div>
-
     <div class="popup" id="myPopup">
         <div class="popuptext" id="myPopupText">
             <span>Coming soon!</span>
-            <img src="images/home.png" alt="">
+            <img src="images/home.png" alt="app preview">
         </div>
         <button class="close" onclick="hidePopup()">Close</button>
     </div>
     <div class="tujijenge">
         <img src="images/tujijenge.png" alt="tujijenge logo">
     </div>
-    <div data-aos="zoom-in-down" class="make_us_different">
+
+    <section data-aos="zoom-in-down" class="make_us_different">
         <h2>What Makes us Different?</h2>
         <div class="underline"></div>
         <p>Empower small-scale vegetable vendors, access to suppliers, and training organizations (GAIN) to connect,
-            collaborate, and thrive using technology.</p>
+            collaborate, and thrive.</p>
+
+
         <div class="services">
-            <div class="sevice">
-                <div class="specific_service">
-                    <img src="images/icon_group.png" alt="">
-                    <p>Mama Mboga Community</p>
+            <div class="sevice service_right">
+                <div class="specific_service ">
+                    <img src="images/mamamboga.png" alt="Community">
+                    <p id="community">Mama Mboga Community</p>
                 </div>
                 <div class="specific_service">
-                    <img src="images/verify.png" alt="">
+                    <img src="images/verify.png" alt="Verification">
                     <p>Get verified in Mama Mboga E-commerce platforms</p>
                 </div>
             </div>
             <div class="home_img">
                 <img src="images/home.png" alt="home page">
             </div>
-            <div class="sevice">
-                <div class="specific_service">
-                    <img src="images/cart.png" alt="cart">
+            <div class="sevice service_left">
+                <div class="specific_service cart">
+                    <img src="images/carts.png" alt="Cart">
                     <p>Buy in groups</p>
                 </div>
-                <div class="specific_service">
-                    <img src="images/stock.svg" alt="stock">
+                <div class="specific_service vegie">
+                    <img src="images/vegies.png" alt="Stock">
                     <p>Keep track of your stock</p>
                 </div>
             </div>
         </div>
-        <div class="work_with_us">
-            <h2>Work with us</h2>
-            <div class="underline"></div>
+    </section>
+    <section class="download_tujijenge">
 
-        </div>
 
         <div class="foot">
-            <h3>Get</h3> <img src="images/tujijenge.png" alt="tujijenge">
+            <h3>Get</h3>
+            <img src="images/tujijenge.png" alt="tujijenge">
         </div>
-        <hr />
-        <button type="button"><i class="fa-brands fa-google-play"></i>Get it on Play Store</button>
+        <div class="bottom_hr">
+            <hr>
+
+        </div>
+        <button type="button" onclick="showPopup()"><i class="fa-brands fa-google-play"></i>Get it on Play
+            Store</button>
         <img id="mockup" src="images/kjsfvs.png" alt="mockup">
-    </div>
+
+    </section>
+
+
     <footer>
         <div class="footer">
             <div class="contacts">
                 <h6>Tujijenge</h6>
-                <p>
-                    Tujijenge is a forward-thinking platform in Nairobi, Kenya revolutionizing Mama Mbogas.
-                </p>
+                <p>Tujijenge is a forward-thinking platform in Nairobi, Kenya, revolutionizing Mama Mbogas.</p>
             </div>
-            <div id="socials">
-                <h6>Get in touch</h6>
+            <div class="socials">
+                <h6>Get in Touch</h6>
                 <div class="icons">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>
-                        AkiraChix, Nairobi, Kenya
-                    </p>
-                </div>
-                <div class="icons">
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>
-                        tujijenge@gmail.com
-                    </p>
-                </div>
-                <div class="icons">
-                    <i class="fa-solid fa-phone"></i>
-                    <p>
-                        +254798230923
-                    </p>
+                    <div class="icon-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>AkiraChix, Nairobi, Kenya</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>tujijenge@gmail.com</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>+254798230923</p>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="index.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script>
-    <script src="index.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const navToggle = document.getElementById('nav-toggle');
-        const navLinks = document.getElementById('nav-links');
-        navToggle.addEventListener('click', function () {
-          navLinks.classList.toggle('open');
-          navToggle.classList.toggle('open');
-        });
+        // The coming soon pop up
+        function showPopup() {
+            document.getElementById("myPopup").style.display = "block";
+        }
 
-        document.querySelectorAll('.links a').forEach(link => {
-          link.addEventListener('click', () => {
-            if (window.innerWidth < 900) {
-              navLinks.classList.remove('open');
-              navToggle.classList.remove('open');
-            }
-          });
-        });
-      });
+        function hidePopup() {
+            document.getElementById("myPopup").style.display = "none";
+        }
     </script>
 </body>
+
 </html>
