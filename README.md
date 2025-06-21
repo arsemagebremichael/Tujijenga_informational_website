@@ -1,6 +1,6 @@
 # Tujijenge Informational Website
 
-This repository contains the source code for the **Tujijenge** informational website—a platform dedicated to providing information about Tujijenge’s mission, services, team, FAQs, testimonials, and contact details.
+This repository contains the source code for the **[Tujijenge](https://tujijenge.netlify.app/)** informational website—a platform dedicated to providing information about Tujijenge’s mission, services, team, FAQs, testimonials, and contact details.
 
 ---
 
